@@ -15,7 +15,7 @@ It is therefore possible for a learner who gets a perfect score in the diagnosti
 
 The blocks containing questions in this introductory 'diagnostic assessment' are given a new property to link them to target content objects by adding the following to the relevant entries in `blocks.json`:
 ```
-"_diagnostic_": {
+"_diagnostic": {
     "_relatedTopics": [
         "co-05"
     ]
@@ -23,7 +23,7 @@ The blocks containing questions in this introductory 'diagnostic assessment' are
 ```
 Or, if you want more than one content object to be associated to the question(s) in the block:
 ```
-"_diagnostic_": {
+"_diagnostic": {
     "_relatedTopics": [
         "co-05",
         "co-10
@@ -38,7 +38,7 @@ If a content object is not associated with any of the questions in the diagnosti
 
 The main configuration for this extension is in `course.json`:
 ```
-"_diagnostic_": {
+"_diagnostic": {
     "_isEnabled": true,
     "_shouldSubmitScore": true,
     "_diagnosticAssessmentId": "diagnostic",
@@ -56,7 +56,7 @@ The setting `_diagnosticAssessmentId` is the 'assessment ID' of the diagnostic a
 
 When all diagnostic questions associated with a topic are answered correctly that topic can either be removed from the learner journey or made optional. Set `_passedRelatedTopicsBecome` to `unavailable` or `optional` to determine this behaviour respectively.
 
-If the user is allowed to opt out of the diagnostic then a single `diagnosticChoice` component should be defined and presented upfront. Appropriate labelling should be defined in `course.json` by `_globals._components._diagnosticChoice` (see `example.json`). Once the selection to opt in or opt out has been made the user can optionally be routed to a particular part of the course. Use the `_diagnosticChoice` property in the global `_diagnostic_` configuration to define the routes.
+If the user is allowed to opt out of the diagnostic then a single `diagnosticChoice` component should be defined and presented upfront. Appropriate labelling should be defined in `course.json` by `_globals._components._diagnosticChoice` (see `example.json`). Once the selection to opt in or opt out has been made the user can optionally be routed to a particular part of the course. Use the `_diagnosticChoice` property in the global `_diagnostic` configuration to define the routes.
 
 ## Learner Journey Scenarios
 
